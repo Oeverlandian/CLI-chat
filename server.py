@@ -34,4 +34,4 @@ def get_local_ip():
 if __name__ == '__main__':
     local_ip = get_local_ip()
     print(f"Server is running on: {local_ip}:5000")
-    socketio.run(app, host='0.0.0.0', port=5000, debug=True)
+    socketio.run(app, host='0.0.0.0', port=5000, debug=False)
