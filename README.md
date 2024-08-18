@@ -14,7 +14,7 @@ This repository contains a simple chat application using Flask and Flask-SocketI
 ### For clients (using client.py)
 1. Clone the repository.
 2 Download the dependencies
-   ```pip install flask flask_socketio```
+   ```pip install requests flask flask_socketio```
 3. Run client.py
 4. Input the IP or domain of the server.
 5. Enter your desired username.
@@ -23,7 +23,7 @@ This repository contains a simple chat application using Flask and Flask-SocketI
 ### Server Install and Usage
 1. Download server.py from the latest release or clone the repository.
 2. Download the dependencies
-   ```pip install flask flask_socketio```
+   ```pip install requests flask flask_socketio```
 4. Make sure that port forwarding is enabled and that the server won't be blocked by any firewalls.
 5. Run server.py
 6. The server is now online!
