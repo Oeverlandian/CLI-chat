@@ -12,8 +12,8 @@ This repository contains a simple chat application using Flask and Flask-SocketI
 5. You can now send messages!
 
 ### For clients (using client.py)
-1. Clone the repository.
-2 Download the dependencies
+1. Clone the repository. 
+2. Download the dependencies
    ```pip install requests flask flask_socketio```
 3. Run client.py
 4. Input the IP or domain of the server.
@@ -24,9 +24,9 @@ This repository contains a simple chat application using Flask and Flask-SocketI
 1. Download server.py from the latest release or clone the repository.
 2. Download the dependencies
    ```pip install requests flask flask_socketio```
-4. Make sure that port forwarding is enabled and that the server won't be blocked by any firewalls.
-5. Run server.py
-6. The server is now online!
+3. Make sure that port forwarding is enabled and that the server won't be blocked by any firewalls.
+4. Run server.py
+5. The server is now online!
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.txt file for details.
