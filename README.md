@@ -1,6 +1,7 @@
 # Flask-SocketIO Chat Application
 
 This repository contains a simple chat application using Flask and Flask-SocketIO.
+This is also available on [http://www.oeverlandian.xyz]
 
 ## Installation and Usage
 
