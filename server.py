@@ -1,23 +1,29 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_socketio import SocketIO, send
 from datetime import datetime
 import socket
 
-server_name = None
-
 app = Flask(__name__)
-socketio = SocketIO(app)
+socketio = SocketIO(app, cors_allowed_origins="*")
 
+@app.route('/')
+def index():
+    return render_template('experiments.html')
+
+@socketio.on('message')
 @socketio.on('message')
 def handle_message(data):
     username = data['username']
     message = data['message']
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    
-    full_message = f"{username} | {timestamp}\n{message}"
+
+    raw_data = {'username': username, 'message': message, 'timestamp': timestamp}
+
     print(f"Received message from {username} at {timestamp}: {message}")
-    
-    send(full_message, broadcast=True)
+
+    # Send the raw data to all clients
+    send(raw_data, broadcast=True)
+
 
 def get_local_ip():
     try:

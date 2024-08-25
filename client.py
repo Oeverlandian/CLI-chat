@@ -11,10 +11,10 @@ current_input = ""
 def on_message(data):
     global current_input
 
+    full_message = f"--------------------------------\n{data['username']} | {data['timestamp']}\n{data['message']}\n--------------------------------"
+
     sys.stdout.write("\033[K")
-    
-    print(f"\r{data}")
-    
+    print(f"\r{full_message}")
     sys.stdout.write(f"Enter your message: {current_input}")
     sys.stdout.flush()
 
